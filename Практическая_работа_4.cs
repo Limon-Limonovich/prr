@@ -9,8 +9,7 @@ class Program
         string pass1 = Console.ReadLine();
         int i1 = 0;
         int len1 = 0;
-        while (i1 < pass1.Length && pass1[i1] != '.' && pass1[i1] != '
-')
+        while (i1 < pass1.Length && pass1[i1] != '.' && pass1[i1] != '\n')
         {
             len1++;
             i1++;
@@ -188,7 +187,7 @@ class Program
 
         // Задание 13. Имитация атаки Time-Based Blind SQL Injection
         Console.Write("Задание 13. Введите секретный символ (a-z): ");
-        char secretChar = Console.ReadLine()[0];
+        char secretChar = char.Parse(Console.ReadLine());
         char curChar = 'a';
         while (curChar <= 'z')
         {
