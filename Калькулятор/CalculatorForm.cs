@@ -12,6 +12,7 @@ namespace Calculator
 
         private void calculateButton_Click(object sender, EventArgs e)
         {
+            // Задание 1. Переменные для двух операндов и операции
             double firstOperand = double.Parse(firstOperandTextBox.Text);
             double secondOperand = 0;
             if (secondOperandTextBox.Text != "")
@@ -20,6 +21,7 @@ namespace Calculator
             }
             string operation = operationTextBox.Text;
 
+            // Задание 2. Основные арифметические операции (+, -, *, /)
             if (operation == "+")
             {
                 resultTextBox.Text = (firstOperand + secondOperand).ToString();
@@ -43,6 +45,7 @@ namespace Calculator
                     resultTextBox.Text = (firstOperand / secondOperand).ToString();
                 }
             }
+            // Задание 3. Вычисление факториала (!)
             else if (operation == "!")
             {
                 if (firstOperand < 0)
@@ -57,36 +60,6 @@ namespace Calculator
                         factorial = factorial * i;
                     }
                     resultTextBox.Text = factorial.ToString();
-                }
-            }
-            else if (operation == "prime")
-            {
-                int number = (int)firstOperand;
-                int nextNumber = number + 1;
-                if (nextNumber < 2)
-                {
-                    nextNumber = 2;
-                }
-
-                while (true)
-                {
-                    bool isPrime = true;
-                    for (int i = 2; i < nextNumber; i++)
-                    {
-                        if (nextNumber % i == 0)
-                        {
-                            isPrime = false;
-                            break;
-                        }
-                    }
-
-                    if (isPrime)
-                    {
-                        resultTextBox.Text = nextNumber.ToString();
-                        break;
-                    }
-
-                    nextNumber = nextNumber + 1;
                 }
             }
         }

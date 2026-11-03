@@ -1,16 +1,35 @@
 using System;
-using System.Windows.Forms;
 
-namespace Calculator
+class Program
 {
-    static class Program
+    static void Main()
     {
-        [STAThread]
-        static void Main()
+        // Вариант 11. Подсчет среднего арифметического цифр числа
+        Console.Write("Введите целое число: ");
+        int number = int.Parse(Console.ReadLine());
+
+        if (number < 0)
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CalculatorForm());
+            number = -number;
         }
+
+        int sum = 0;
+        int count = 0;
+
+        if (number == 0)
+        {
+            count = 1;
+        }
+
+        while (number > 0)
+        {
+            int digit = number % 10;
+            sum = sum + digit;
+            count = count + 1;
+            number = number / 10;
+        }
+
+        double average = (double)sum / count;
+        Console.WriteLine("Среднее арифметическое цифр числа: " + average);
     }
 }
