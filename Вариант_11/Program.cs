@@ -4,7 +4,6 @@ class Program
 {
     static void Main()
     {
-        // Вариант 11. Подсчет среднего арифметического цифр числа
         Console.Write("Введите целое число: ");
         int number = int.Parse(Console.ReadLine());
 

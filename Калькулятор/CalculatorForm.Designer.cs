@@ -31,40 +31,33 @@ namespace Calculator
             this.resultTextBox = new TextBox();
             this.SuspendLayout();
 
-            // firstOperandTextBox
             this.firstOperandTextBox.Font = new Font("Segoe UI", 16F);
             this.firstOperandTextBox.Location = new Point(45, 50);
             this.firstOperandTextBox.Name = "firstOperandTextBox";
             this.firstOperandTextBox.Size = new Size(125, 36);
             this.firstOperandTextBox.TabIndex = 0;
 
-            // operationTextBox
             this.operationTextBox.Font = new Font("Segoe UI", 16F);
             this.operationTextBox.Location = new Point(210, 50);
             this.operationTextBox.Name = "operationTextBox";
             this.operationTextBox.Size = new Size(115, 36);
             this.operationTextBox.TabIndex = 1;
 
-            // secondOperandTextBox
             this.secondOperandTextBox.Font = new Font("Segoe UI", 16F);
             this.secondOperandTextBox.Location = new Point(365, 50);
             this.secondOperandTextBox.Name = "secondOperandTextBox";
             this.secondOperandTextBox.Size = new Size(115, 36);
             this.secondOperandTextBox.TabIndex = 2;
 
-            // calculateButton
-            this.calculateButton.BackColor = Color.FromArgb(225, 225, 225);
             this.calculateButton.Font = new Font("Segoe UI", 16F);
             this.calculateButton.Location = new Point(45, 105);
             this.calculateButton.Name = "calculateButton";
             this.calculateButton.Size = new Size(435, 42);
             this.calculateButton.TabIndex = 3;
             this.calculateButton.Text = "=";
-            this.calculateButton.UseVisualStyleBackColor = false;
+            this.calculateButton.UseVisualStyleBackColor = true;
             this.calculateButton.Click += new System.EventHandler(this.calculateButton_Click);
 
-            // resultTextBox
-            this.resultTextBox.BackColor = Color.White;
             this.resultTextBox.Font = new Font("Segoe UI", 16F);
             this.resultTextBox.Location = new Point(45, 175);
             this.resultTextBox.Name = "resultTextBox";
@@ -72,8 +65,6 @@ namespace Calculator
             this.resultTextBox.Size = new Size(435, 36);
             this.resultTextBox.TabIndex = 4;
 
-            // CalculatorForm
-            this.BackColor = Color.FromArgb(106, 159, 168);
             this.ClientSize = new Size(525, 245);
             this.Controls.Add(this.resultTextBox);
             this.Controls.Add(this.calculateButton);

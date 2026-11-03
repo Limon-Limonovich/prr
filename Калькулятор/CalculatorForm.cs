@@ -12,7 +12,6 @@ namespace Calculator
 
         private void calculateButton_Click(object sender, EventArgs e)
         {
-            // Задание 1. Переменные для двух операндов и операции
             double firstOperand = double.Parse(firstOperandTextBox.Text);
             double secondOperand = 0;
             if (secondOperandTextBox.Text != "")
@@ -21,7 +20,6 @@ namespace Calculator
             }
             string operation = operationTextBox.Text;
 
-            // Задание 2. Основные арифметические операции (+, -, *, /)
             if (operation == "+")
             {
                 resultTextBox.Text = (firstOperand + secondOperand).ToString();
@@ -45,7 +43,6 @@ namespace Calculator
                     resultTextBox.Text = (firstOperand / secondOperand).ToString();
                 }
             }
-            // Задание 3. Вычисление факториала (!)
             else if (operation == "!")
             {
                 if (firstOperand < 0)

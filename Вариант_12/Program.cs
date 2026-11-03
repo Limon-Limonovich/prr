@@ -4,7 +4,6 @@ class Program
 {
     static void Main()
     {
-        // Вариант 12. Сгенерировать ближайшее простое число (большее введенного)
         Console.Write("Введите целое число: ");
         int number = int.Parse(Console.ReadLine());
 
